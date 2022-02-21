@@ -1,6 +1,6 @@
-# README
 
-These resources can be used to recreate the ARI table for Highland Tribes.  Recreating   
+
+
 ### Data Creation
 All needed data is already generated, but you can verify the labelings using the following steps:
 - Geometric Means Laplacian Clustering (GM) - https://github.com/melopeo/GM
