@@ -1,3 +1,33 @@
+# graphC
+
+**graphC** algorithmm implements the wrapper for the state-of-art (2022) community discovery methods, and measures ARI of the methods on sample data. 
+
+** Automated run on sample data** 
+```
+>>python run.py
+```
+
+The wrapper calls ```graphC.py``` and creates the ARI table for Highland Tribes data. All the Highland signed graph clustering methods are run and outputs saved in the subfolders. 
+
+**Follow [SETUP.md](SETUP.md)** instructions on how to create the ARI table for different dataset. 
+
+# Citation
+
+Please cite this publication:  Tomasso, M., Rusnak, L., Tešić, J. [_Advances in Scaling Community Discovery Methods for Large Signed Graph Networks_](https://arxiv.org/abs/2110.07514). arXiv (2022). 
+
+ **BibTeX entry:**
+ 
+```
+@article{2022Survey,
+  author    = {Maria Tomasso and Lucas Rusnak and Jelena Tesic},
+  title     = {Advances in Scaling Community Discovery Methods for Large Signed Graph Networks},
+  journal   = {CoRR},
+  volume    = {abs/2110.07514},
+  year      = {2022},
+  url       = {https://arxiv.org/abs/2110.07514}
+}
+```
+
 # Advances in Scaling Community Discovery Methods for Large Signed Graph Networks
 
 **Authors:** Maria Tomasso, Lucas Rusnak, Jelena Tešić
@@ -7,10 +37,7 @@ Community detection is a common task in social network analysis (SNA) with appli
 
 [Paper](https://arxiv.org/abs/2110.07514)
 
-# Method Comparison
+#  
 
-```
-python run.py
-```
 
-The wrapper calls ```graphC.py``` and creates the ARI table for Highland Tribes data. All the Highland signed graph clustering methods are run and outputs saved in respective folders. If you want to create the ARI table for different dataset follow [SETUP.md](SETUP.md) instructrions
+
