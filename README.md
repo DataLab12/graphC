@@ -37,7 +37,6 @@ Community detection is a common task in social network analysis (SNA) with appli
 
 [Paper](https://arxiv.org/abs/2110.07514)
 
-#  
-
+[Data Lab @ TXST](DataLab12.github.io)
 
 
