@@ -24,7 +24,8 @@ article{10.1093/comnet/cnac013,
 ```
 
 ## How to Run the Code 
-** Automated run on sample data** 
+
+*Automated run on sample data:
 ```
 >>python run.py
 ```
