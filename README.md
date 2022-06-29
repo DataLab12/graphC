@@ -3,7 +3,7 @@
 The **graphC** (graph clustering) code implements comparison presented in [Advances in Scaling Community Discovery Methods for Signed Graph Networks](https://academic.oup.com/comnet/article-abstract/doi/10.1093/comnet/cnac013/6608828) journal paper ([Full Paper](https://arxiv.org/abs/2110.07514) on arXiv).
 
 # Citation
-Please cite the following publication: **Tomasso, M., Rusnak, L., Tešić, J. [_Advances in Scaling Community Discovery Methods for Signed Graph Networks](https://academic.oup.com/comnet/article-abstract/doi/10.1093/comnet/cnac013/6608828), Journal of Complex Networks, Volume 10, Issue 3, June 2022, DOI: 10.1093/comnet/cnac013.**
+Please cite the following publication: **Tomasso, M., Rusnak, L., Tešić, J. [Advances in Scaling Community Discovery Methods for Signed Graph Networks](https://academic.oup.com/comnet/article-abstract/doi/10.1093/comnet/cnac013/6608828), Journal of Complex Networks, Volume 10, Issue 3, June 2022, DOI: 10.1093/comnet/cnac013.**
 
 **BibTeX entry:**
 ```
