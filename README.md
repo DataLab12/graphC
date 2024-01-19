@@ -6,7 +6,11 @@ Authors: <em> Muhieddine Shebaro, Martin Burtscher, Lucas Rusnak, Jelena Tešić
 
 **graphC** (2024) is a scalable state-of-the-art hierarchical clustering algorithm for signed graphs capable of automatically detecting clusters without a predefined K hyperparameter (number of communities), no matrices, no decomposition spectral solvers, and no ground-truth labels. The algorithm is implemented in C++ and employs an efficient fundamental cycle basis discovery method to balance a connected component, performs Harary cuts, and selects the most optimal split based on the following quality criteria:
 
-> 𝑙𝑜𝑠𝑠=𝛽(𝛼∗𝑝𝑜𝑠_𝑜𝑢𝑡+(1−𝛼)𝑛𝑒𝑔_𝑖𝑛)+(1−𝛽)/𝑛 𝑖𝑠𝑜
+>𝑙𝑜𝑠𝑠=𝛽(𝛼∗𝑝𝑜𝑠_𝑜𝑢𝑡+(1−𝛼)𝑛𝑒𝑔_𝑖𝑛)+(1−𝛽)/𝑛 𝑖𝑠𝑜
+![image](https://github.com/DataLab12/graphC/assets/95373719/0c5e23a1-92cb-47f5-bc39-7070016b7d8e)
+
+
+𝑝𝑜𝑠_𝑜𝑢𝑡 and 𝑛𝑒𝑔_𝑖𝑛  are normalized, thus resolving the positive–negative imbalance of edge signs. This will ensure that the negative edges are placed between clusters in a priority equal to positive edges between placed within clusters
 
 ## Pipeline
 ![GraphC:Pipeline!](/images/pipeline1.png "GraphC: Pipeline")
