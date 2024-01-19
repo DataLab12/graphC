@@ -1,4 +1,4 @@
-# graphC: Parameter-Free Optimal Hierarchical Clustering of Signed Graphs
+# GraphC: Parameter-Free Optimal Hierarchical Clustering of Signed Graphs
 
 Authors: <em> Muhieddine Shebaro, Martin Burtscher, Lucas Rusnak, Jelena Tešić </em>
 
