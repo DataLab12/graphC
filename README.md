@@ -4,9 +4,7 @@ Authors: <em> Muhieddine Shebaro, Martin Burtscher, Lucas Rusnak, Jelena Tešić
 
 ![Highland Tribes Execution!](/images/animate.gif "Highland Tribes Clustering")
 
-**graphC** (2024) is a scalable state-of-the-art hierarchical clustering algorithm for signed graphs capable of automatically detecting clusters without a predefined K hyperparameter (number of communities), no matrices, no decomposition spectral solvers, and no ground-truth labels.
-
-The algorithm is implemented in C++ and employs an efficient fundamental cycle basis discovery method to balance a connected component, performs Harary cuts, and selects the most optimal split based on the following quality criteria:
+**graphC** (2024) is a scalable state-of-the-art hierarchical clustering algorithm for signed graphs capable of automatically detecting clusters without a predefined K hyperparameter (number of communities), no matrices, no decomposition spectral solvers, and no ground-truth labels. The algorithm is implemented in C++ and employs an efficient fundamental cycle basis discovery method to balance a connected component, performs Harary cuts, and selects the most optimal split based on the following quality criteria:
 
 𝑙𝑜𝑠𝑠=𝛽(𝛼∗𝑝𝑜𝑠_𝑜𝑢𝑡+(1−𝛼)𝑛𝑒𝑔_𝑖𝑛)+(1−𝛽)/𝑛 𝑖𝑠𝑜
 
