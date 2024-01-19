@@ -48,7 +48,7 @@ user:~$ ./a.out input.txt 0.5 1 0.000001 -1 2
 ```
 You can input -1 in time_limit to allow the algorithm to run the algorithm until it's finished. Minimum of γ is 2. Range of 𝛼 and 𝛽 is [0,1]. Range of ε is [0, infinity].
  
-graphC outputs the 2 .txt files:
+* graphC outputs the 2 .txt files:
 
 1. *_labels.txt: This contains the assigned clustering labels for each node (original node ID).
 2. *_posin_negout.txt: This contains the history of change of the fraction of positive edges within communities and fraction of negative edges between communities including the overall improvement and unhappy ratio after each Harary split.
@@ -56,7 +56,7 @@ graphC outputs the 2 .txt files:
 <br>
 **Note: ** Do not change the name of "GraphBplus_Harary.cpp" file. And if you run into errors related to the stack memory please run this command before executing the code:
 ```
->>ulimit -s unlimited
+user:~$ ulimit -s unlimited
 ```
 
 [Data Lab @ TXST](DataLab12.github.io)
