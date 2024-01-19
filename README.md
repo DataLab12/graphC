@@ -8,7 +8,7 @@ Authors: <em> Muhieddine Shebaro, Martin Burtscher, Lucas Rusnak, Jelena Tešić
 
 𝑙𝑜𝑠𝑠=𝛽(𝛼∗𝑝𝑜𝑠_𝑜𝑢𝑡+(1−𝛼)𝑛𝑒𝑔_𝑖𝑛)+(1−𝛽)/𝑛 𝑖𝑠𝑜
 
-# Pipeline
+## Pipeline
 ![GraphC:Pipeline!](/images/pipeline1.png "GraphC: Pipeline")
 
 1. After a Harary split, the algorithm is going to iterate through newly obtained and old connected components and try to split these CC using the best Harary cuts over and over. 
@@ -20,7 +20,7 @@ Authors: <em> Muhieddine Shebaro, Martin Burtscher, Lucas Rusnak, Jelena Tešić
 *Overall_Loss_Current – Overall_Loss_Previous < ε  → The algorithm will add the CC that had been most recently split into a set “processed”. Any CC in that set won’t be processed and split further because it doesn’t improve the overall loss even if Harary split is performed in it. The split done to this CC will be reversed because it worsens performance.
 
 
-# Citation
+## Citation
 Please cite the following publication: TBD
 
 **BibTeX entry:**
