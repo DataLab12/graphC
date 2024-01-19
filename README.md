@@ -16,8 +16,8 @@ Authors: <em> Muhieddine Shebaro, Martin Burtscher, Lucas Rusnak, Jelena Tešić
 
 3. The algorithm will stop splitting a specific CC if one of the conditions is satisfied:
 * Current_clock >= Clock_limit → The entire program will halt, and labels are returned. (-1: Unlimited time)
-*CC_size <= γ   → This is mainly for computational efficiency and scalability where algorithm won’t even try and balance a CC and find its Harary cut if it’s small under the assumption that it will yield minimal performance gains. The algorithm will skip it.
-*Overall_Loss_Current – Overall_Loss_Previous < ε  → The algorithm will add the CC that had been most recently split into a set “processed”. Any CC in that set won’t be processed and split further because it doesn’t improve the overall loss even if Harary split is performed in it. The split done to this CC will be reversed because it worsens performance.
+* CC_size <= γ   → This is mainly for computational efficiency and scalability where algorithm won’t even try and balance a CC and find its Harary cut if it’s small under the assumption that it will yield minimal performance gains. The algorithm will skip it.
+* Overall_Loss_Current – Overall_Loss_Previous < ε  → The algorithm will add the CC that had been most recently split into a set “processed”. Any CC in that set won’t be processed and split further because it doesn’t improve the overall loss even if Harary split is performed in it. The split done to this CC will be reversed because it worsens performance.
 
 
 ## Citation
@@ -30,17 +30,17 @@ TBD
 
 ## How to Run the Code 
 
-*Simply download index.cpp and GraphBplus_Harary.cpp and compile the former source file like the following:
+* Simply download index.cpp and GraphBplus_Harary.cpp and compile the former source file like the following:
 
 ```
->>g++ -fopenmp index.cpp
+user:~$ g++ -fopenmp index.cpp
 ```
 The signed graph must be in the following format to be compatible with graphC (src,dst,sign).
 Preprocessing of the signed graph is embedded and neutral edges are treated as positive.
 
-*To execute the compiled file, graphC utilizes 6 parameters in this order (iteration_count 𝛼 𝛽 ε time_limit γ):
+* To execute the compiled file, graphC utilizes 6 parameters in this order (iteration_count 𝛼 𝛽 ε time_limit γ):
 ```
->>./a.out input.txt 0.5 1 0.000001 -1 2
+user:~$ ./a.out input.txt 0.5 1 0.000001 -1 2
 ```
 You can input -1 in time_limit to allow the algorithm to run the algorithm until it's finished. Minimum of γ is 2. Range of 𝛼 and 𝛽 is [0,1]. Range of ε is [0, infinity].
  
