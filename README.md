@@ -1,35 +1,52 @@
-# graphC
+# GraphC: Parameter-Free Optimal Hierarchical Clustering of Signed Graphs
 
-The **graphC** (graph clustering) code implements comparison presented in [Advances in Scaling Community Discovery Methods for Signed Graph Networks](https://academic.oup.com/comnet/article-abstract/doi/10.1093/comnet/cnac013/6608828) journal paper ([Full Paper](https://arxiv.org/abs/2110.07514) on arXiv).
+Authors: <em> Muhieddine Shebaro, Martin Burtscher, Lucas Rusnak, Jelena Tešić </em>
 
-# Citation
-Please cite the following publication: **Tomasso, M., Rusnak, L., Tešić, J. [Advances in Scaling Community Discovery Methods for Signed Graph Networks](https://academic.oup.com/comnet/article-abstract/doi/10.1093/comnet/cnac013/6608828), Journal of Complex Networks, Volume 10, Issue 3, June 2022, DOI: 10.1093/comnet/cnac013.**
+![Highland Tribes Execution!](/images/animate.gif "Highland Tribes Clustering")
+
+**graphC** (2024) is a scalable state-of-the-art hierarchical clustering algorithm for signed graphs capable of automatically detecting clusters without a predefined K hyperparameter (number of communities), no matrices, no decomposition spectral solvers, and no ground-truth labels. The algorithm is implemented in C++ and employs an efficient fundamental cycle basis discovery method to balance a connected component, performs Harary cuts, and selects the most optimal split for a connected component.
+
+## Citation
+Please cite the following publication:
 
 **BibTeX entry:**
 ```
-article{10.1093/comnet/cnac013,
-    author = {Tomasso, Maria and Rusnak, Lucas J and Tešić, Jelena},
-    title = "{Advances in scaling community discovery methods for signed graph networks}",
-    journal = {Journal of Complex Networks},
-    volume = {10},
-    number = {3},
-    year = {2022},
-    month = {06},
-    issn = {2051-1329},
-    doi = {10.1093/comnet/cnac013},
-    url = {https://doi.org/10.1093/comnet/cnac013},
-    note = {cnac013},
-    eprint = {https://academic.oup.com/comnet/article-pdf/10/3/cnac013/44082209/cnac013.pdf},
+@misc{shebaro2025graphcparameterfreehierarchicalclustering,
+      title={GraphC: Parameter-free Hierarchical Clustering of Signed Graph Networks v2}, 
+      author={Muhieddine Shebaro and Lucas Rusnak and Martin Burtscher and Jelena Tešić},
+      year={2025},
+      eprint={2411.00249},
+      archivePrefix={arXiv},
+      primaryClass={cs.SI},
+      url={https://arxiv.org/abs/2411.00249}, 
 }
 ```
 
 ## How to Run the Code 
 
-*Automated run on sample data:
+* Simply download index.cpp and GraphBplus_Harary.cpp and compile the former source file like the following:
+
 ```
->>python run.py
+user:~$ g++ -fopenmp index.cpp
 ```
-The wrapper calls ```graphC.py``` and creates the ARI table for Highland Tribes data. All the Highland signed graph clustering methods are run and outputs saved in the subfolders. Follow [SETUP.md](SETUP.md)** instructions on how to create the ARI table for different dataset. 
+The signed graph must be in the following format to be compatible with graphC (src,dst,sign).
+Preprocessing of the signed graph is embedded and neutral edges are treated as positive.
+
+* To execute the compiled file, graphC utilizes 6 parameters in this order (iteration_count 𝛼 𝛽 ε time_limit γ):
+```
+user:~$ ./a.out input.txt 0.5 1 0.000001 -1 2
+```
+You can input -1 in time_limit to allow the algorithm to run until it's finished. Minimum of γ is 2. Range of 𝛼 and 𝛽 is [0,1]. Range of ε is [0, infinity].
+ 
+* graphC outputs 2 .txt files:
+
+1. *_labels.txt: This contains the assigned clustering labels for each node (original node ID).
+2. *_posin_negout.txt: This contains the history of change of the fraction of positive edges within communities and fraction of negative edges between communities including the overall improvement and unhappy ratio after each Harary split.
+
+**Note:** Do <em> not</em> change the name of "GraphBplus_Harary.cpp" file. And if you run into errors related to the stack memory please run this command before executing the code:
+```
+user:~$ ulimit -s unlimited
+```
 
 [Data Lab @ TXST](DataLab12.github.io)
 
